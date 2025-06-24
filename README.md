@@ -1,6 +1,6 @@
 # GitHub Repository Access Report Generator
 
-The **GitHub Repository Access Report Generator** is a simple Node.js application that fetches collaborator information from GitHub repositories and generates an access report in CSV format. This report provides insights into the access levels of collaborators (either admin or write permissions) for a list of specified repositories.
+The **GitHub Repository Access Report Generator** is a straightforward Node.js application that fetches collaborator information from GitHub repositories and generates an access report in CSV format. This report provides insights into the access levels of collaborators (either admin or write permissions) for a list of specified repositories.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ Before using this application, ensure that you have the following:
 3. Install the required Node.js packages by running:
 
    ```
-   npm install
+   pnpm install
    ```
 
 ## Usage
@@ -38,24 +38,22 @@ Before using this application, ensure that you have the following:
    repository-3
    ```
 
-2. Set `GITHUB_TOKEN` as an environment variable with your with your GitHub personal access token.
-
-3. Run the application by executing the following command in the terminal:
+2. Run the application by executing the following command in the terminal:
 
    ```
-   npm start
+   GITHUB_TOKEN="<insert token here>" pnpm run getUsers
    ```
 
    The application will fetch collaborator information for each repository in the `repos.txt` file and generate an access report in CSV format named `access-report.csv`.
 
-4. Once the application completes its execution, you can find the generated access report in the same directory as `access-report.csv`.
+3. Once the application completes its execution, you can find the generated access report in the same directory as `access-report.csv`.
 
 ## Testing
 
 The application tests may be run with the following command:
 
 ```
-npm test
+pnpm test
 ```
 
 ## Notes
